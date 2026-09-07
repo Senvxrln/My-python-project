@@ -8,8 +8,12 @@ def df(x):
     return 3*x**2 - 12*x + 8
 
 #performance monitoring
-cpu_usage = psutil.cpu_percent(interval=0.1)
-ram_usage = psutil.virtual_memory().percent
+cpu_usage_i = psutil.cpu_percent(interval=0.1)
+ram_usage_i = psutil.virtual_memory().percent
+
+print("CPU Usage_i:", cpu_usage_i, "%")
+print("RAM Usage_i:", ram_usage_i, "%")
+
 # parameters
 tol = 10**-10 #tolerance
 max_iter = 100 # maximum iteration 
@@ -37,3 +41,9 @@ else:
 
 f_time = time.perf_counter()
 print("Execution time:", f_time - i_time, "seconds")
+
+cpu_usage_f = psutil.cpu_percent(interval=0.1)
+ram_usage_f = psutil.virtual_memory().percent
+
+print("CPU Usage_f:", cpu_usage_f, "%")
+print("RAM Usage_f:", ram_usage_f, "%")
