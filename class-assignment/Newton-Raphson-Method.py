@@ -1,11 +1,15 @@
 # Find the root of the function x**3 + 3x + 2 using newton-raphson method
 import time
+import psutil
 def f(x):
     return x**3 - 6*x**2 + 8*x + 0.8
 
 def df(x):
     return 3*x**2 - 12*x + 8
 
+#performance monitoring
+cpu_usage = psutil.cpu_percent(interval=0.1)
+ram_usage = psutil.virtual_memory().percent
 # parameters
 tol = 10**-10 #tolerance
 max_iter = 100 # maximum iteration 
