@@ -11,7 +11,7 @@ ram_usage_i = psutil.virtual_memory().percent
 
 
 # parameters
-tol = 10**-6  # tolerance
+tol = 10**-12  # tolerance
 max_iter = 100  # maximum iteration
 itr = 0 
 t = float(input("Initial guess(radian): "))  # initial guess
